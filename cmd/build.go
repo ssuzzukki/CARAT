@@ -21,6 +21,20 @@ var buildCmd = &cobra.Command{
 }
 
 func init() {
+	buildCmd.Flags().StringP(
+		"output", 
+		"o", 
+		"", 
+		"Output executable", 
+	)
+
+	buildCmd.Flags().StringP(
+		"icon", 
+		"i", 
+		"", 
+		"Application icon", 
+	)
+	
 	rootCmd.AddCommand(buildCmd)
 
 }
